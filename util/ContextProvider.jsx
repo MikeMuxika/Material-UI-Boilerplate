@@ -1,10 +1,6 @@
 import React from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 
-// import Paper from 'material-ui/Paper';
-// import TextField from 'material-ui/TextField';
-// import RaisedButton from 'material-ui/RaisedButton';
-
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import BaseTheme from '../BaseTheme';
@@ -13,11 +9,11 @@ import BaseTheme from '../BaseTheme';
 // Passing stores this way makes things nice and modular
 
 // Stores
-//var StoreName = require('../stores/StoreName');
+//Example: var LoginStore = require('../stores/LoginStore');
+
 
 // Actions
-//var ActionsName = require('../actions/ActionsName');
-
+//Example: var LoginActions = require('../actions/LoginActions');
 
 class ContextProvider extends React.Component {
 
@@ -25,10 +21,10 @@ class ContextProvider extends React.Component {
 		super(props);
 		this.state = {
 			stores: {
-				//StoreName: StoreName
+				//Example: LoginStore: LoginStore,
 			},
 			actions: {
-				//ActionName: ActionName
+				//Example: LoginActions: LoginActions,
 			}
 		}
 	}

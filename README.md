@@ -1,9 +1,9 @@
-# Material-UI-Boilerplate
-Boilerplate for Material-UI, React.JS, and Webpack
+# Material UI Boilerplate using webpack
 
-## Get set up
+# Set Up
+
 `npm install`
-
+then
 `npm run dev`
 
-Go to localhost:8080
+in browser, go to localhost:8080 or localhost if you have NginX set up that way.

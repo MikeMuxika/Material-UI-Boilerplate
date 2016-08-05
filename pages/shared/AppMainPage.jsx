@@ -12,24 +12,24 @@ import { withRouter } from 'react-router'
 import BaseTheme from '../../BaseTheme';
 import ContextProvider from '../../util/ContextProvider';
 
-//Import Components
 import ExampleComponent from '../../components/ExampleComponent';
 
 class AppMainPage extends React.Component {
 
 	constructor(props) {
 		super(props);
-
 	}
+
 	render() {
 
 		return (
+
 			<ContextProvider>
-				<div>
+				<div style={{marginTop: '25px'}}>
 					<ExampleComponent />
 					<div style={{margin: '0px auto', maxWidth: '950px'}}>Repeating Example component to show how multiple components can be loaded into Page</div>
 					<ExampleComponent />
-    			</div>
+				</div>
 			</ContextProvider>
 		);
 

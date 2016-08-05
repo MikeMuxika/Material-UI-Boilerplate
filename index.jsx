@@ -9,14 +9,12 @@ if (!window.fetch) window.fetch = require('fetch-ie8')
 require('es6-promise').polyfill();
 
 // Pages
-import GenericIndexPage from './pages/shared/GenericIndexPage';
 import AppMainPage from './pages/shared/AppMainPage';
 
 var routerConfig =
 <Router history={browserHistory}>
-
 	{/* Main App Bundle */}
-	<Route path="/" component={AppMainPage}></Route>
+	<Route path="/" component={AppMainPage} />
 </Router>
 
 ReactDOM.render(routerConfig , document.getElementById('reactApp'));

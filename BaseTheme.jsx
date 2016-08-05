@@ -1,3 +1,10 @@
+/*
+    Custom theme for Venu
+        - The hope is to use this file as much as possible for design, so that we can make efficient changes to styles
+        - It seems unwise to remove any existing attribtues
+        - Apparently we can also do this for each component (raised button, appbar, drawer, etc.), see below
+*/
+
 // For more info, check out the default material-ui theme at
 // https://github.com/callemall/material-ui/blob/master/src/styles/baseThemes/lightBaseTheme.js
 // https://github.com/callemall/material-ui/blob/master/src/styles/baseThemes/darkBaseTheme.js
@@ -9,16 +16,27 @@ import {
 } from 'material-ui/styles/colors';
 import {fade} from 'material-ui/utils/colorManipulator';
 
-
-//If colors cannot be imported from material-ui, do as below
 var secondaryText = '#727272'
 var dividerColor = '#B6B6B6'
 
 const BaseTheme = {
-	fontFamily: 'Roboto, sans-serif',
-	//Manage Color Theme:
-	//To use in inline styles: color: this.props.muiTheme.palette.primary1Color
-	palette: {
+	blue: lightBlueA400,
+	pink: pinkA200,
+    spacing: {
+        iconSize: 24,
+        desktopGutter: 24,
+        desktopGutterMore: 32,
+        desktopGutterLess: 16,
+        desktopGutterMini: 8,
+        desktopKeylineIncrement: 64,
+        desktopDropDownMenuItemHeight: 32,
+        desktopDropDownMenuFontSize: 15,
+        desktopDrawerMenuItemHeight: 48,
+        desktopSubheaderHeight: 48,
+        desktopToolbarHeight: 56,
+    },
+    fontFamily: 'Roboto, sans-serif',
+    palette: {
         primary1Color: lightBlueA400,
         primary2Color: lightBlue500,
         primary3Color: grey400,
@@ -35,23 +53,13 @@ const BaseTheme = {
         clockCircleColor: fade(grey900, 0.07),
         shadowColor: fullBlack,
     },
-	//Define colors here so that you don't have to use the lengthy pallette option
-	//To use: color: this.props.muiTheme.blue
-	blue: lightBlueA400,
-	pink: pinkA200,
-	spacing: {
-		iconSize: 24,
-		desktopGutter: 24,
-		desktopGutterMore: 32,
-		desktopGutterLess: 16,
-		desktopGutterMini: 8,
-		desktopKeylineIncrement: 64,
-		desktopDropDownMenuItemHeight: 32,
-		desktopDropDownMenuFontSize: 15,
-		desktopDrawerMenuItemHeight: 48,
-		desktopSubheaderHeight: 48,
-		desktopToolbarHeight: 56,
-	}
+    // Component-Level Overrides
+    appBar: {
+        // by default, ap pbar uses primary1Color, but we want it to use white. So, we override
+        // This only makes sense if we want ALL appbars used to be white.  Otherwise, just set backgroundColor white in styles
+        color: 'white',
+        textColor: lightBlue500
+    }
 };
 
 export default BaseTheme;

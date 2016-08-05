@@ -9,6 +9,10 @@
   },
   "author": "Michael Stearn and Joseph Martin",
   "license": "MIT",
+  "repository" : {
+	  "type" : "git",
+	  "url" : "https://github.com/muxica/Material-UI-Boilerplate.git"
+  },
   "dependencies": {
     "alt": "^0.18.5",
     "alt-container": "^1.0.2",
